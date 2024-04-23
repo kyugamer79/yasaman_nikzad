@@ -1,0 +1,62 @@
+@use 'sass:map';
+@use './variables' as *;
+@use './functions' as *;
+@use './mixins' as *;
+@use './colors' as *;
+
+:root {
+	--body-font-family: 'Peyda', system-ui, -apple-system, 'Segoe UI', Roboto;
+	--border-radius: #{$radius};
+	--border-radius-sm: #{$radius_sm};
+	--box-shadow: #{$shadow};
+	--box-shadow-sm: #{$shadow_sm};
+}
+
+html[dir='ltr'] {
+	:root {
+		--body-text-align: left;
+	}
+}
+
+html[dir='rtl'] {
+	:root {
+		--body-text-align: right;
+	}
+}
+
+body {
+	font-family: var(--body-font-family);
+	text-align: var(--body-text-align);
+
+	color: var(--color-text-default);
+	background-color: var(--color-background-default);
+
+	@include fs();
+	@include media_query() {
+		font-size: var(--body-font-size-sm);
+	}
+}
+
+::-moz-selection {
+	color: $color_secondary_800;
+	background: $color_secondary_200;
+}
+
+::selection {
+	color: $color_secondary_800;
+	background: $color_secondary_200;
+}
+
+// .clearfix {
+//   &::after {
+//     content: "";
+//     display: block;
+//     clear: both;
+//   }
+
+//   @for $i from 0 through 16 {
+//     &.s-#{$i} {
+//       padding: $i * 0.125rem 0 !important;
+//     }
+//   }
+// }

@@ -1,0 +1,81 @@
+@use './functions' as *;
+/*Colors*/
+$skeleton_colors: (
+	'background': (
+		'default' #fcfcfc #000,
+		'paper' #ebebeb #000,
+	),
+	'text': (
+		'default' #000000 #fff,
+		'light' #2e2e2e #ffd,
+	),
+);
+
+$colors_base: (
+	'primary': #0f45d8,
+	'secondary': #3e00a1,
+	'accent': #d40404,
+	'error': #dc3545,
+	'warning': #ffc107,
+	'info': #0dcaf0,
+	'success': #198754,
+	'natural': #7c7c7c,
+);
+
+/*Border Radius*/
+$radius: 0.5rem;
+$radius_sm: 0.25rem;
+
+/*Borders*/
+$border_1: solid 1px var(--color-primary);
+
+/*Transitions*/
+$transition: 0.3s ease;
+
+/*Box shadow*/
+$shadow: 0 0 0.5rem #{rgba(145, 145, 145, 0.25)};
+$shadow_sm: 0 0 0.25rem #{rgba(145, 145, 145, 0.15)};
+
+/*Typography
+for ex:
+make_font_list(font-size , font-weight , line-height);
+*/
+$typo: (
+	'title': make_font_list(5rem, 700),
+	'title-sm': make_font_list(3.75rem, 700),
+	'h1': make_font_list(2rem, 700),
+	'h2': make_font_list(1.5rem, 700),
+	'h3': make_font_list(1.25rem, 700),
+	'h4': make_font_list(1.1rem, 700),
+	'h5': make_font_list(1rem, 700),
+	'h6': make_font_list(1rem, 700),
+	'body': make_font_list(1rem, 500, 1.75),
+	'body-sm': make_font_list(1.2rem, 500),
+	'caption': make_font_list(0.85rem, 500),
+);
+
+/*Breakpoints*/
+$breakpoints: (
+	'xxs': 320px,
+	'xs': 480px,
+	'sm': 576px,
+	'md': 768px,
+	'lg': 992px,
+	'xl': 1200px,
+	'xxl': 1440px,
+);
+
+/*Container Sizes*/
+$content_max_width: 1440px;
+$paragraph_max_width: 1000px;
+$breakout_max_width: 1600px;
+$padding_inline: 1rem;
+
+/*General*/
+$button_padding_ratio: 1;
+$button_padding_base_block: 0.375rem;
+$button_padding_base_inline: 0.75rem;
+
+$input_padding_ratio: 1.25;
+$input_padding_base_block: 0.5rem;
+$input_padding_base_inline: 0.75rem;

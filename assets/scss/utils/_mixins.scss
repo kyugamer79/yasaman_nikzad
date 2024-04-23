@@ -1,0 +1,103 @@
+@use './functions' as *;
+@use './variables' as *;
+
+@mixin media_query($viewport: 'md', $maxOrMin: 'max') {
+	$window_width: map-get($breakpoints, $viewport);
+
+	@if ($maxOrMin == 'max') {
+		@media screen and (max-width: #{$window_width - .2}) {
+			@content;
+		}
+	} @else if ($maxOrMin == 'min') {
+		@media screen and (min-width: #{$window_width}) {
+			@content;
+		}
+	} @else {
+		@error 'input is wrong';
+	}
+}
+
+@mixin fs($type: 'body') {
+	$font_map: map-get($typo, $type);
+
+	@if ($font_map) {
+		font-size: map-get($font_map, 'font-size');
+		font-weight: map-get($font_map, 'font-weight');
+		line-height: map-get($font_map, 'line-height');
+	} @else {
+		@error "You'r input #{$type} is wrong";
+	}
+}
+
+//#region pseudo
+@mixin pseudo(
+	$inset: 0 0 auto auto,
+	$square: PxToRem(4),
+	$z-index: 1,
+	$el: after,
+	$content: '',
+	$position: absolute
+) {
+	position: relative;
+	isolation: isolate;
+
+	&::#{$el} {
+		content: $content;
+		position: $position;
+		inset: $inset;
+		width: $square;
+		height: $square;
+		z-index: $z-index;
+		@content;
+	}
+}
+//#endregion
+
+@mixin make_icon($content, $pseudo: 'after') {
+	@if ($pseudo != 'after' or $pseudo != 'before') {
+		@error 'pseudo is wrong!';
+	}
+
+	&::#{$pseudo} {
+		content: $content;
+		font-family: 'iconsax' !important;
+		speak: never;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		@content;
+	}
+}
+
+@mixin user-select() {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+@mixin user-drag() {
+	-webkit-user-drag: none;
+	-moz-user-drag: none;
+	-ms-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}
+
+@mixin inline-text() {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@mixin max_line($line) {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+}

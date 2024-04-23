@@ -1,0 +1,28 @@
+{
+	"name": "Project Name",
+	"version": "0.0.0",
+	"description": "",
+	"author": "cyan-dm",
+	"scripts": {
+		"install-pkg": "npm i sass postcss postcss-cli autoprefixer esbuild -g",
+		"recommend-pkg": "npm i gsap swiper",
+		"w-scss": "sass ./assets/scss/index.scss ./assets/css/compiled.css -w",
+		"b-scss": "sass ./assets/scss/index.scss ./assets/css/compiled.css -s compressed",
+		"b-pre-css": "postcss ./assets/css/compiled.css -o ./assets/css/final.css --use autoprefixer -m",
+		"build-css": "npm run b-scss && npm run b-pre-css",
+		"w-js": "esbuild ./assets/js/index.js --outfile=./assets/js/dist/scripts.bundle.js --target=es6,chrome58,edge18,firefox54,safari11 --bundle --watch",
+		"build-js": "esbuild ./assets/js/index.js --outfile=./assets/js/dist/scripts.bundle.min.js --target=es6,chrome58,edge18,firefox54,safari11 --bundle --minify --sourcemap"
+	},
+	"license": "ISC",
+	"devDependencies": {
+		"zip-build": "^1.8.0"
+	},
+	"dependencies": {
+		"gsap": "^3.12.2",
+		"swiper": "^11.0.3"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 version"
+	]
+}

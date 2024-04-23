@@ -1,0 +1,138 @@
+@use '../utils' as *;
+
+$positions: relative, absolute, fixed, sticky, static;
+
+@each $pos in $positions {
+	.pos-#{$pos} {
+		position: $pos;
+	}
+}
+
+@each $pos in $positions {
+	@each $point, $size in $breakpoints {
+		@media (max-width: $size) {
+			.pos-#{$point}-#{$pos} {
+				position: $pos;
+			}
+		}
+	}
+}
+
+[class*='box-col-'] {
+	display: grid;
+	grid-template-columns: repeat(var(--col, 1), 1fr);
+}
+
+[class*='col-span-'] {
+	grid-column: var(--span, 1) span;
+}
+
+[class*='flex-'] {
+	flex: var(--flex, 1);
+}
+
+@for $i from 1 through 20 {
+	.box-col-#{$i} {
+		--col: #{$i};
+	}
+
+	.col-span-#{$i} {
+		--span: #{$i};
+	}
+
+	.flex-#{$i} {
+		--flex: #{$i};
+	}
+}
+
+@for $i from 1 through 20 {
+	@each $point, $size in $breakpoints {
+		@media (max-width: $size) {
+			.box-col-#{$point}-#{$i} {
+				--col: #{$i};
+			}
+
+			.col-span-#{$point}-#{$i} {
+				--span: #{$i};
+			}
+
+			.flex-#{$point}-#{$i} {
+				--flex: #{$i};
+			}
+		}
+	}
+}
+
+[class*='grid-auto-fit-'] {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(var(--min-width, 100%), 1fr));
+}
+
+@for $i from 200 through 450 {
+	@if ($i % 25 == 0) {
+		.grid-auto-fit-#{$i} {
+			--min-width: #{$i}px;
+		}
+	}
+}
+
+@for $i from 200 through 450 {
+	@if ($i % 25 == 0) {
+		@each $point, $size in $breakpoints {
+			@media (max-width: $size) {
+				.grid-auto-fit-#{$point}-#{$i} {
+					--min-width: #{$i}px;
+				}
+			}
+		}
+	}
+}
+
+.container {
+	--padding-inline: #{$padding_inline};
+	--paragraph-max-width: #{$paragraph_max_width};
+	--content-max-width: #{$content_max_width};
+	--breakout-max-width: #{$breakout_max_width};
+
+	--breakout-size: calc(
+		(var(--breakout-max-width) - var(--content-max-width)) / 2
+	);
+
+	--paragraph-size: calc(
+		(var(--content-max-width) - var(--paragraph-max-width)) / 2
+	);
+
+	display: grid;
+	grid-template-columns:
+		[full-width-start]
+		minmax(var(--padding-inline), 1fr)
+		[breakout-start]
+		minmax(0, var(--breakout-size))
+		[content-start]
+		minmax(0, var(--paragraph-size))
+		[paragraph-start]
+		min(100% - (var(--padding-inline) * 2), var(--paragraph-max-width))
+		[paragraph-end]
+		minmax(0, var(--paragraph-size))
+		[content-end]
+		minmax(0, var(--breakout-size))
+		[breakout-end]
+		minmax(var(--padding-inline), 1fr)
+		[full-width-end];
+}
+
+.container > * {
+	grid-column: content;
+}
+
+.container > .paragraph {
+	grid-column: paragraph;
+}
+
+.container > .breakout {
+	grid-column: breakout;
+}
+
+.container > .full-width {
+	grid-column: full-width;
+}

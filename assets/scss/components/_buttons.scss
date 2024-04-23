@@ -1,0 +1,126 @@
+@use 'sass:map';
+@use '../utils' as *;
+
+@mixin initial_button($fs: 'body', $gap: 0.25rem) {
+	@include fs($fs);
+	gap: $gap;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	background: transparent;
+	transition: color #{$transition}, background-color #{$transition},
+		border-color #{$transition}, box-shadow #{$transition},
+		filter #{$transition}, opacity #{$transition};
+
+	cursor: pointer;
+	@include user-select();
+
+	& > i {
+		vertical-align: middle;
+		line-height: 1.5;
+		font-size: 1em !important;
+	}
+}
+
+@mixin btn(
+	$color,
+	$bg-color,
+	$br-color,
+	$h-color,
+	$h-bg-color,
+	$h-br-color,
+	$br-width: 1px,
+	$padding-size: $button_padding_ratio,
+	$border-radius: $radius
+) {
+	color: $color;
+	background-color: $bg-color;
+	border: $br-width solid $br-color;
+	padding-block: $padding-size * $button_padding_base_block;
+	padding-inline: $padding-size * $button_padding_base_inline;
+	border-radius: $border-radius;
+
+	&:hover {
+		color: $h-color;
+		background-color: $h-bg-color;
+		border-color: $h-br-color;
+	}
+
+	&:focus {
+		color: $color;
+		background-color: $bg-color;
+		border-color: $br-color;
+		box-shadow: 0 0 0 1px $br-color;
+	}
+
+	&:focus:active {
+		box-shadow: 0 0 0 2px $br-color;
+	}
+}
+
+/** Initial Buttons **/
+
+$btn-prefix: 'btn';
+
+@function btn-select($variant, $prefix: $btn-prefix) {
+	@return '.' + $prefix + '-' + $variant;
+}
+
+[class*='#{$btn-prefix}-'] {
+	@include initial_button();
+
+	&:disabled {
+		pointer-events: none;
+		opacity: 0.5;
+	}
+
+	&:focus-visible {
+		outline: 0;
+	}
+}
+
+/*
+name of buttons that uses in project
+
+"default"
+"primary"
+"secondary"
+*/
+
+#{btn-select("default")} {
+	@include btn(
+		$color: $color_text_default,
+		$bg-color: $color_background_default,
+		$br-color: $color_background_default,
+		$h-color: $color_text_default,
+		$h-bg-color: $color_background_paper,
+		$h-br-color: $color_background_paper
+	);
+}
+
+#{btn-select('primary')} {
+	@include btn(
+		$color: $color_primary_900,
+		$bg-color: $color_primary,
+		$br-color: $color_primary,
+		$h-color: $color_primary_100,
+		$h-bg-color: $color_primary_700,
+		$h-br-color: $color_primary_700
+	);
+}
+
+#{btn-select('secondary')} {
+	@include btn(
+		$color: $color_secondary_100,
+		$bg-color: $color_secondary,
+		$br-color: $color_secondary,
+		$h-color: $color_secondary_900,
+		$h-bg-color: $color_secondary_300,
+		$h-br-color: $color_secondary_300
+	);
+}
+
+/** **/

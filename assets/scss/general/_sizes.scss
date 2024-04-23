@@ -1,0 +1,94 @@
+@use 'sass:math';
+@use '../utils' as *;
+
+@for $i from 1 through 120 {
+	@if ($i % 4 == 0) {
+		.clr-fix-#{$i} {
+			padding-block: math.div($i, 16) + rem;
+		}
+
+		.gap-#{$i} {
+			gap: px_to_rem($i);
+		}
+
+		.radius-#{$i} {
+			border-radius: px_to_rem($i);
+		}
+
+		//#region box sizing
+
+		.m-#{$i} {
+			margin: px_to_rem($i);
+		}
+
+		.mb-#{$i} {
+			margin-block: px_to_rem($i);
+		}
+
+		.mi-#{$i} {
+			margin-inline: px_to_rem($i);
+		}
+
+		.m-bs-#{$i} {
+			margin-block-start: px_to_rem($i);
+		}
+
+		.m-be-#{$i} {
+			margin-block-end: px_to_rem($i);
+		}
+
+		.m-is-#{$i} {
+			margin-inline-start: px_to_rem($i);
+		}
+
+		.p-#{$i} {
+			padding: px_to_rem($i);
+		}
+
+		.pb-#{$i} {
+			padding-block: px_to_rem($i);
+		}
+
+		.pi-#{$i} {
+			padding-inline: px_to_rem($i);
+		}
+
+		.p-ie-#{$i} {
+			padding-inline-end: px_to_rem($i);
+		}
+
+		.p-bs-#{$i} {
+			padding-block-start: px_to_rem($i);
+		}
+
+		.p-be-#{$i} {
+			padding-block-end: px_to_rem($i);
+		}
+
+		.p-is-#{$i} {
+			padding-inline-start: px_to_rem($i);
+		}
+
+		.p-ie-#{$i} {
+			padding-inline-end: px_to_rem($i);
+		}
+
+		//#endregion
+
+		.top-#{$i} {
+			top: px_to_rem($i);
+		}
+
+		.left-#{$i} {
+			left: px_to_rem($i);
+		}
+
+		.right-#{$i} {
+			right: px_to_rem($i);
+		}
+
+		.bottom-#{$i} {
+			bottom: px_to_rem($i);
+		}
+	}
+}

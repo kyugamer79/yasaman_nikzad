@@ -1,0 +1,71 @@
+@use 'sass:color';
+@use '../utils' as *;
+
+:root {
+	@each $name, $pallette in $skeleton_colors {
+		@each $shade, $color, $dark_mode in $pallette {
+			--color-#{$name}-#{$shade}: #{$color};
+		}
+	}
+
+	@each $name, $color in $colors_base {
+		@each $s, $c in $shades {
+			@if ($s == 500) {
+				--color-#{$name}: #{color.scale($color, $lightness: $c * 1%)};
+			} @else {
+				--color-#{$name}-#{$s}: #{color.scale($color, $lightness: $c * 1%)};
+			}
+		}
+	}
+}
+
+[data-theme='dark'] {
+	@each $name, $pallette in $skeleton_colors {
+		@each $shade, $color, $dark_mode in $pallette {
+			@if $dark_mode != null {
+				--color-#{$name}-#{$shade}: #{$dark_mode};
+			}
+		}
+	}
+}
+
+@each $name, $pallette in $skeleton_colors {
+	@each $shade, $color in $pallette {
+		@if $name == 'text' {
+			.text-#{$shade} {
+				color: var(--color-#{$name}-#{$shade}, $color);
+			}
+		}
+		@if $name == 'background' {
+			.bg-#{$shade} {
+				background-color: var(--color-#{$name}-#{$shade}, $color);
+			}
+		}
+	}
+}
+
+@each $base, $color in $colors_base {
+	@each $shade_name, $shade_value in $shades {
+		@if $shade_name != 500 {
+			.text-#{$base}#{-$shade_name} {
+				color: var(--color-#{$base}-#{$shade_name});
+			}
+
+			.bg-#{$base}#{-$shade_name} {
+				background-color: var(--color-#{$base}-#{$shade_name});
+			}
+		} @else {
+			.text-#{$base} {
+				color: var(--color-#{$base});
+			}
+
+			.bg-#{$base} {
+				background-color: var(--color-#{$base});
+			}
+		}
+	}
+}
+
+* {
+	transition: background-color $transition;
+}

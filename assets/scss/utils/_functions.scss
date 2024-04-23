@@ -1,0 +1,11 @@
+@use 'sass:math';
+
+@function make_font_list($fs, $fw, $lh: 1.5) {
+	@return ('font-size': $fs, 'font-weight': $fw, 'line-height': $lh);
+}
+
+@function px_to_rem($px) {
+	@if ($px % 4 == 0) {
+		@return calc($px / 16) + rem;
+	}
+}

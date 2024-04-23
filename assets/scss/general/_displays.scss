@@ -1,0 +1,67 @@
+@use '../utils' as *;
+
+$display: flex, grid, block, inline, inline-block, inline-flex, none;
+
+@each $d in $display {
+	.d-#{$d} {
+		display: $d;
+	}
+}
+
+@each $d in $display {
+	@each $point, $size in $breakpoints {
+		@media (max-width: $size) {
+			.d-#{$point}-#{$d} {
+				display: $d;
+			}
+		}
+	}
+}
+
+$justify_content: start flex-start, end flex-end, center center,
+	between space-between, evenly space-evenly, around space-around;
+
+@each $label, $content in $justify_content {
+	.jc-#{$label} {
+		justify-content: $content;
+	}
+}
+
+$align_item: start flex-start, end flex-end, center center, stretch stretch,
+	base baseline;
+
+@each $label, $content in $align_item {
+	.ai-#{$label} {
+		align-items: $content;
+	}
+}
+
+$flex_directions: row, row-reverse, column, column-reverse;
+
+@each $dir in $flex_directions {
+	.f-#{$dir} {
+		flex-direction: $dir;
+	}
+}
+
+@each $dir in $flex_directions {
+	@each $point, $size in $breakpoints {
+		@media (max-width: $size) {
+			.f-#{$point}-#{$dir} {
+				flex-direction: $dir;
+			}
+		}
+	}
+}
+
+.d-flex {
+	flex-wrap: wrap;
+}
+
+.f-wrap {
+	flex-wrap: wrap;
+}
+
+.f-nowrap {
+	flex-wrap: nowrap;
+}

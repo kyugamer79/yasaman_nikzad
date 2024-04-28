@@ -19,4 +19,22 @@
       el.setAttribute("checked", "");
     });
   });
+
+  // assets/js/modules/mobile-menu.js
+  var mobileMenu = () => {
+    const mobileMenuOpener = document.getElementById("mobileMenuOpener");
+    const mobileMenu2 = document.getElementById("mobileMenu");
+    if (!mobileMenu2 || !mobileMenuOpener) {
+      return;
+    }
+    mobileMenuOpener.addEventListener("click", () => {
+      mobileMenu2.classList.add("active");
+    });
+    mobileMenu2.addEventListener("click", (event) => {
+      if (event.target === mobileMenu2) {
+        mobileMenu2.classList.remove("active");
+      }
+    });
+  };
+  mobileMenu();
 })();

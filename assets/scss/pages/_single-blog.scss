@@ -1,0 +1,39 @@
+@use "../utils/" as *;
+
+// .bread-crump {
+//   text-decoration: underline;
+// }
+section {
+  &.single-post-content {
+    img {
+      border-radius: $radius;
+      overflow: hidden;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 2/1;
+    }
+
+    blockquote {
+      &::before {
+        content: url("../image/quote-up.svg");
+      }
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        padding-inline: 200px;
+        padding-bottom: 20px;
+        @include media_query("md") {
+          padding-inline: 0px;
+          padding-bottom: 0px;
+        }
+      }
+      // background-repeat: no-repeat;
+      // background-position: top center;
+    }
+  }
+}

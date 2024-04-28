@@ -1,0 +1,63 @@
+@use "../utils" as *;
+
+nav.menu {
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-transform: capitalize;
+  }
+}
+
+.current-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &::before {
+    content: "";
+    background: linear-gradient(
+      107deg,
+      var(--color-secondary) -11.52%,
+      var(--color-secondary-400) 129.61%
+    );
+    width: 12.515px;
+    height: 2px;
+    border-radius: 12px;
+  }
+}
+
+.menu-mobile {
+  opacity: 0;
+  backdrop-filter: blur(5px);
+  pointer-events: none;
+  transition: opacity $transition;
+
+  &-inner {
+    transform: translateX(-100%);
+    transition: transform $transition;
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+
+    .menu-mobile-inner {
+      transform: translateX(0);
+    }
+  }
+}
+
+.menu-mobile-inner {
+  max-width: 340px;
+  min-width: 300px;
+  margin-top: 12px;
+  border: solid 1px var(--color-secondary);
+  border-radius: 0 16px 16px 0;
+
+  .search-logo,
+  .mobile-menu-logo {
+    width: 24px;
+  }
+}

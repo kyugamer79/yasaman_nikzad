@@ -1,1 +1,12 @@
-@use '../utils/' as *;
+@use "../utils/" as *;
+
+.footer-rec {
+  margin-inline: auto;
+  width: 50vw;
+  height: 2rem;
+  border-radius: 16px 16px 0px 0px;
+
+  @include media_query("sm", "max") {
+    width: 82vw;
+  }
+}

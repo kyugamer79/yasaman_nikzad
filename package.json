@@ -1,5 +1,5 @@
 {
-	"name": "Project Name",
+	"name": "nikzad",
 	"version": "0.0.0",
 	"description": "",
 	"author": "cyan-dm",
@@ -18,8 +18,8 @@
 		"zip-build": "^1.8.0"
 	},
 	"dependencies": {
-		"gsap": "^3.12.2",
-		"swiper": "^11.0.3"
+		"gsap": "^3.12.5",
+		"swiper": "^11.1.1"
 	},
 	"browserslist": [
 		"> 1%",

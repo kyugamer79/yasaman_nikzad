@@ -1,0 +1,35 @@
+@use "../utils/" as *;
+main.contact-us {
+  overflow: hidden;
+}
+.contact-us-image {
+  &-wrapper {
+    transform: scale(1.5) translateY(3rem);
+    position: relative;
+    z-index: -1;
+  }
+  @include media_query("xs", "min") {
+    &-wrapper {
+      transform: scale(2) translateY(5rem);
+      margin-block-end: -15rem;
+      overflow: hidden;
+      position: relative;
+      z-index: -100;
+    }
+  }
+
+  @include media_query("xs") {
+    &-wrapper {
+      transform: scale(2) translateY(3rem);
+      margin-block-end: -8rem;
+      overflow: hidden;
+      position: relative;
+      z-index: -100;
+    }
+  }
+}
+.send-contact-us {
+  @include media_query("xs") {
+    width: 100%;
+  }
+}

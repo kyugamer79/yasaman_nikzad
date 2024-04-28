@@ -136,3 +136,7 @@ $positions: relative, absolute, fixed, sticky, static;
 .container > .full-width {
 	grid-column: full-width;
 }
+
+.h-100 {
+	height: 100%;
+  }

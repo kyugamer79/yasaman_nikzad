@@ -1,0 +1,23 @@
+@use "../utils" as *;
+
+.nav-links {
+  display: flex;
+}
+
+.page-numbers {
+  display: flex;
+  height: 50px;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  &.current {
+    border-radius: 12px;
+    background: linear-gradient(
+      107deg,
+      var(--color-secondary) -11.52%,
+      var(--color-secondary-400) 129.61%
+    );
+  }
+}

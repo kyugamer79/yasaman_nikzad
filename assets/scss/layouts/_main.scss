@@ -1,32 +1,32 @@
-@use '../utils' as *;
+@use "../utils" as *;
 
 main.sample-page {
-	.section-title {
-		border-bottom: 1px solid $color_natural_800;
-		margin-block-end: 1rem;
-	}
+  .section-title {
+    border-bottom: 1px solid $color_natural_800;
+    margin-block-end: 1rem;
+  }
 
-	section {
-		padding: 1rem;
-		outline: 1px solid $color_natural_300;
-	}
+  section {
+    padding: 1rem;
+    outline: 1px solid $color_natural_300;
+  }
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	.fs-title,
-	.fs-title-sm {
-		text-transform: capitalize;
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .fs-title,
+  .fs-title-sm {
+    text-transform: capitalize;
+  }
 
-	.shadow {
-		box-shadow: $shadow;
-	}
+  .shadow {
+    box-shadow: $shadow;
+  }
 
-	.shadow-sm {
-		box-shadow: $shadow_sm;
-	}
+  .shadow-sm {
+    box-shadow: $shadow_sm;
+  }
 }

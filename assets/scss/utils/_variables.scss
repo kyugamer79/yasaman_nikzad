@@ -1,29 +1,35 @@
-@use './functions' as *;
+@use "./functions" as *;
 /*Colors*/
 $skeleton_colors: (
-	'background': (
-		'default' #fcfcfc #000,
-		'paper' #ebebeb #000,
-	),
-	'text': (
-		'default' #000000 #fff,
-		'light' #2e2e2e #ffd,
-	),
+  "background": (
+    "default" #1e1e1e #000,
+    "cart" #282727 #000,
+    "cart2" #f7f7f7 #000,
+  ),
+  "text": (
+    "default" #969696 #fff,
+    "main" #505050 #fff,
+    "light" #2e2e2e #ffd,
+  ),
 );
 
 $colors_base: (
-	'primary': #0f45d8,
-	'secondary': #3e00a1,
-	'accent': #d40404,
-	'error': #dc3545,
-	'warning': #ffc107,
-	'info': #0dcaf0,
-	'success': #198754,
-	'natural': #7c7c7c,
+  "primary": #282727,
+  "secondary": #f21305,
+  "accent": #d40404,
+  "error": #dc3545,
+  "warning": #ffc107,
+  "info": #0dcaf0,
+  "success": #198754,
+  "natural": #7c7c7c,
 );
 
+:root {
+  --color-secondary-400: #f25c05 !important;
+}
+
 /*Border Radius*/
-$radius: 0.5rem;
+$radius: 1rem;
 $radius_sm: 0.25rem;
 
 /*Borders*/
@@ -41,28 +47,28 @@ for ex:
 make_font_list(font-size , font-weight , line-height);
 */
 $typo: (
-	'title': make_font_list(5rem, 700),
-	'title-sm': make_font_list(3.75rem, 700),
-	'h1': make_font_list(2rem, 700),
-	'h2': make_font_list(1.5rem, 700),
-	'h3': make_font_list(1.25rem, 700),
-	'h4': make_font_list(1.1rem, 700),
-	'h5': make_font_list(1rem, 700),
-	'h6': make_font_list(1rem, 700),
-	'body': make_font_list(1rem, 500, 1.75),
-	'body-sm': make_font_list(1.2rem, 500),
-	'caption': make_font_list(0.85rem, 500),
+  "title": make_font_list(156px, 600px, 189px),
+  "title-sm": make_font_list(52px, 600px, 64px),
+  "h1": make_font_list(2rem, 700),
+  "h2": make_font_list(1.5rem, 700),
+  "h3": make_font_list(1.25rem, 700),
+  "h4": make_font_list(1.1rem, 700),
+  "h5": make_font_list(1rem, 700),
+  "h6": make_font_list(1rem, 700),
+  "body": make_font_list(1rem, 500, 1.75),
+  "body-sm": make_font_list(1.2rem, 500),
+  "caption": make_font_list(0.85rem, 500),
 );
 
 /*Breakpoints*/
 $breakpoints: (
-	'xxs': 320px,
-	'xs': 480px,
-	'sm': 576px,
-	'md': 768px,
-	'lg': 992px,
-	'xl': 1200px,
-	'xxl': 1440px,
+  "xxl": 1440px,
+  "xl": 1200px,
+  "lg": 992px,
+  "md": 768px,
+  "sm": 576px,
+  "xs": 480px,
+  "xxs": 320px,
 );
 
 /*Container Sizes*/

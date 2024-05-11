@@ -1,37 +1,38 @@
-@use '../utils' as *;
+@use "../utils" as *;
 
-$font_sizes: title, title-sm, h1, h2, h3, h4, h5, h6, body, body-sm, caption;
+$font_sizes: title, title-1, title-sm, h1, h2, h3, h4, h5, h6, body, body-sm,
+  caption;
 
 @each $size in $font_sizes {
-	#{$size},
-	.fs-#{$size} {
-		@include fs(#{$size});
-	}
+  #{$size},
+  .fs-#{$size} {
+    @include fs(#{$size});
+  }
 }
 
 @each $size in $font_sizes {
-	@each $point, $size_b in $breakpoints {
-		@media (max-width: $size_b) {
-			#{$size},
-			.fs-#{$point}-#{$size} {
-				@include fs(#{$size});
-			}
-		}
-	}
+  @each $point, $size_b in $breakpoints {
+    @media (max-width: $size_b) {
+      #{$size},
+      .fs-#{$point}-#{$size} {
+        @include fs(#{$size});
+      }
+    }
+  }
 }
 
 .text-right {
-	text-align: right;
+  text-align: right;
 }
 
 .text-left {
-	text-align: left;
+  text-align: left;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .text-justify {
-	text-align: justify;
+  text-align: justify;
 }

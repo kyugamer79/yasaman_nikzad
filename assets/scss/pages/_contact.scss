@@ -1,4 +1,5 @@
 @use "../utils/" as *;
+
 main.contact-us {
   overflow: hidden;
 }
@@ -17,7 +18,6 @@ main.contact-us {
       z-index: -100;
     }
   }
-
   @include media_query("xs") {
     &-wrapper {
       transform: scale(2) translateY(3rem);

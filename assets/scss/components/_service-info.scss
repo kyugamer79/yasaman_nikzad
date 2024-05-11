@@ -1,0 +1,24 @@
+@use "../utils" as *;
+
+.info-cards-wrapper {
+  .info-card {
+    .info-section {
+      max-width: 324px;
+      height: 296px;
+      border: 1px solid var(--color-secondary-400);
+      box-shadow: $shadow_info;
+    }
+  }
+}
+
+@include media_query("lg", "max") {
+  .info-card {
+    gap: 20px;
+    justify-items: center;
+    margin-block-end: 120px;
+
+    .info-section {
+      width: 343px;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@use "../utils" as *;
+
+.feature-cards {
+  z-index: 100;
+}
+
+.feature-card-wrapper-desktop {
+  border: 1px solid var(--color-secondary-400);
+  z-index: 100;
+
+  .feature-card-icon-wrapper {
+    min-width: 160px;
+    height: 160px;
+    box-shadow: $shadow_info;
+  }
+
+  .feature-card-txt-wrapper {
+    width: 20vw;
+  }
+
+  @include media_query("xl", "min") {
+    &:first-child {
+      margin-left: 575px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 575px;
+    }
+
+    &:nth-child(3) {
+      margin-left: 575px;
+    }
+  }
+}
+
+@include media_query("lg", "max") {
+  .feature-cards {
+    width: 100%;
+  }
+
+  .feature-cards-main-wrapper {
+    gap: 8px;
+    .feature-txt-wrapper {
+      font-size: 48px;
+      line-height: 1;
+    }
+    .feature-cards {
+      margin-block-start: 44px;
+      .feature-card-wrapper-desktop {
+        border: 0;
+        background: 0;
+        align-items: flex-start;
+
+        .feature-card-txt-wrapper {
+          width: 48vw;
+        }
+
+        .feature-card-icon-wrapper {
+          min-width: 44px;
+          height: 60px;
+          padding: 8px;
+        }
+        .feature-card-icon {
+          width: 44px;
+        }
+      }
+    }
+  }
+}

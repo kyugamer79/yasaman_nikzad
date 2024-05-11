@@ -1,0 +1,35 @@
+@use "../utils/" as *;
+
+// main.not-found-image {
+//   &-wrapper {
+//     display: none;
+//     transform: scale(1.5) translateY(3rem);
+//     position: relative;
+//     z-index: -200;
+//   }
+// }
+
+.not-found-image-wrapper {
+  z-index: -200;
+  position: relative;
+  transform: scale(1) translateY(5rem);
+}
+.error-404 {
+  transform: scale(1) translateY(-23rem);
+  @include media_query("xl", "min") {
+    transform: scale(1) translateY(-15rem);
+    // margin-block-end: -8rem;
+    // overflow: hidden;
+    // position: relative;
+    // z-index: -100;
+  }
+  @include media_query("xl") {
+    transform: scale(1) translateY(-10rem);
+  }
+}
+.go-home-btn {
+  padding: 16px;
+  @include media_query("xs") {
+    width: 100%;
+  }
+}

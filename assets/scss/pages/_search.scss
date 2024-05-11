@@ -1,0 +1,12 @@
+@use "../utils/" as *;
+.results-bg {
+  width: 100%;
+}
+.card-gap {
+  @include media_query("md") {
+    gap: 12px;
+  }
+}
+// .title-blog {
+//   overflow: hidden;
+// }

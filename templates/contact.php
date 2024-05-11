@@ -10,7 +10,8 @@
         <div class="col-span-4 col-span-lg-12">
             <div class="contact-us-image-wrapper d-flex jc-center ai-center h-100">
                 <img class="contact-us-image" src="<?php echo get_stylesheet_directory_uri()
-                                                        . "/assets/image/backgroundContactUs.svg" ?>" alt="design-picture">
+                                                        . "/assets/img/backgroundContactUs.svg" ?>"
+                    alt="design-picture">
             </div>
         </div>
         <div class="col-span-8 col-span-lg-12">
@@ -28,14 +29,16 @@
                     </div>
                 </div>
                 <div class="radius-16 bg-primary">
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" class="p-20"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"
+                        class="p-20"></textarea>
                 </div>
             </form>
             <div class="clr-fix-24"></div>
             <div class="d-flex f-row-reverse">
                 <button class="send-contact-us btn-secondary" type="submit">
                     <span>Send Message</span><img src="<?php echo get_stylesheet_directory_uri()
-                                                            . "/assets/image/Search.png" ?>" alt="submit-picture-contact">
+                                                            . "/assets/img/Search.png" ?>"
+                        alt="submit-picture-contact">
                 </button>
             </div>
         </div>

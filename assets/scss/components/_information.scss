@@ -1,0 +1,79 @@
+@use "../utils" as *;
+
+@include media_query("xl", "min") {
+  .information-cta-wrapper {
+    z-index: 100;
+    height: 404px;
+    box-shadow: $shadow_info;
+
+    .information-cta-icon-wrapper {
+      bottom: 115px;
+    }
+
+    .information-cta-txt {
+      width: 384px;
+    }
+  }
+}
+
+.information-cta-btn {
+  .cta-btn {
+    background: linear-gradient(
+      107deg,
+      var(--color-secondary) -11.52%,
+      var(--color-secondary-400) 129.61%
+    );
+  }
+}
+
+@include media_query("xl", "max") {
+  .information-wrapper {
+    .information-txt-wrapper {
+      margin-block-end: 0;
+      font-size: 48px;
+      line-height: 2;
+    }
+
+    .information-cta-icon-wrapper {
+      bottom: 116px;
+
+      .information-cta-icon-blur {
+        width: 320px;
+        height: 292px;
+        background: linear-gradient(
+          0deg,
+          #282727 75.82%,
+          rgba(142, 138, 138, 0) 82.99%
+        );
+        left: 0;
+        right: 88px;
+        margin: 0 auto;
+        filter: blur(56px);
+        position: absolute;
+        bottom: -84px;
+      }
+    }
+
+    .information-cta-wrapper {
+      margin-block-start: 0;
+      box-shadow: $shadow_info;
+
+      .information-cta-txt {
+        width: 100%;
+      }
+
+      .information-cta-txt {
+        z-index: 100;
+        margin-block-end: 0;
+        margin-block-start: -100px;
+        text-align: center !important;
+      }
+
+      .information-cta-btn {
+        z-index: 100;
+        margin-block-end: 0;
+        width: 100%;
+      }
+    }
+  }
+}

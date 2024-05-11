@@ -1,8 +1,5 @@
 @use "../utils/" as *;
 
-// .bread-crump {
-//   text-decoration: underline;
-// }
 section {
   &.single-post-content {
     img {
@@ -17,7 +14,7 @@ section {
 
     blockquote {
       &::before {
-        content: url("../image/quote-up.svg");
+        content: url("../img/quote-up.svg");
       }
 
       display: flex;
@@ -32,8 +29,6 @@ section {
           padding-bottom: 0px;
         }
       }
-      // background-repeat: no-repeat;
-      // background-position: top center;
     }
   }
 }

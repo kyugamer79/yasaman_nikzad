@@ -2,14 +2,14 @@
 /*Colors*/
 $skeleton_colors: (
   "background": (
-    "default" #1e1e1e #000,
-    "cart" #282727 #000,
-    "cart2" #f7f7f7 #000,
+    "default" #1e1e1e,
+    "cart" #282727,
+    "cart2" #f7f7f7,
   ),
   "text": (
-    "default" #969696 #fff,
-    "main" #505050 #fff,
-    "light" #2e2e2e #ffd,
+    "default" #969696,
+    "main" #505050,
+    "light" #2e2e2e,
   ),
 );
 
@@ -41,6 +41,7 @@ $transition: 0.3s ease;
 /*Box shadow*/
 $shadow: 0 0 0.5rem #{rgba(145, 145, 145, 0.25)};
 $shadow_sm: 0 0 0.25rem #{rgba(145, 145, 145, 0.15)};
+$shadow_info: 0 0.5rem 0.6rem 0 #{rgba(0, 0, 0, 0.25)};
 
 /*Typography
 for ex:
@@ -49,6 +50,8 @@ make_font_list(font-size , font-weight , line-height);
 $typo: (
   "title": make_font_list(156px, 600px, 189px),
   "title-sm": make_font_list(52px, 600px, 64px),
+  "title-1": make_font_list(76px, 600px, 88px),
+  "title-2": make_font_list(48px, 600px, 88px),
   "h1": make_font_list(2rem, 700),
   "h2": make_font_list(1.5rem, 700),
   "h3": make_font_list(1.25rem, 700),
@@ -58,6 +61,10 @@ $typo: (
   "body": make_font_list(1rem, 500, 1.75),
   "body-sm": make_font_list(1.2rem, 500),
   "caption": make_font_list(0.85rem, 500),
+  "caption-sm": make_font_list(36px, 700, 44px),
+  "caption-sm-1": make_font_list(28px, 500, 32px),
+  "body-1": make_font_list(16px, 500, 28px),
+  "body-2": make_font_list(20px, 500, 40px),
 );
 
 /*Breakpoints*/

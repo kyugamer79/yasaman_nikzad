@@ -1,0 +1,127 @@
+@use "../utils/" as *;
+
+.comments-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+
+  .comment-list {
+    padding-block: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    & :second-child {
+      margin-right: 0px;
+    }
+  }
+
+  .reply {
+    // @include d_flex(row, flex-start, center, nowrap, false, PxToRem(24));
+    // @include psudo("before", "\e909", 0, 0, "block", absolute) {
+    // z-index: 5;
+    color: $color_primary;
+    top: 0;
+    left: PxToRem(64);
+    rotate: 90deg;
+    font-size: PxToRem(24);
+    translate: 0 6px;
+  }
+}
+
+.comment {
+  border-bottom: unset;
+  width: 90%;
+  align-self: flex-end;
+  .comment {
+    width: 80%;
+  }
+}
+.comment-author {
+  // @include d_flex(row, flex-start, stretch, nowrap, false, PxToRem(24));
+  img {
+    width: PxToRem(60);
+    height: PxToRem(60);
+    border-radius: 50%;
+  }
+  .says {
+    display: none;
+  }
+}
+
+#respond {
+  // @include d_flex(column, flex-start, stretch, nowrap, false, PxToRem(16));
+  #reply-title {
+    small {
+      #cancel-comment-reply-link {
+        color: $color_primary;
+        margin-left: 8px;
+      }
+    }
+  }
+  // form {
+  //   // @include d_flex(column, flex-start, stretch, nowrap, false, PxToRem(16));
+  //   textarea {
+  //     width: 100%;
+  //   }
+  // }
+}
+
+// .comments-content #comment-list .comment .comment {
+//   border-bottom: unset;
+//   width: 90%;
+//   align-self: flex-end;
+// }
+// .comments-content #comment-list .comment .comment .comment {
+//   width: 80%;
+// }
+// .comments-content #comment-list .comment .comment-author {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   align-items: stretch;
+//   flex-wrap: nowrap;
+//   gap: 1.5rem;
+// }
+// .comments-content #comment-list .comment .comment-author img {
+//   width: 3.75rem;
+//   height: 3.75rem;
+//   border-radius: 50%;
+// }
+// .comments-content #comment-list .comment .comment-author .says {
+//   display: none;
+// }
+// .comments-content #respond {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: stretch;
+//   flex-wrap: nowrap;
+//   gap: 1rem;
+// }
+// .comments-content #respond #reply-title small #cancel-comment-reply-link {
+//   color: var(--white);
+//   font-family: "Inter";
+//   font-size: 1.25rem;
+//   font-style: normal;
+//   font-weight: 700;
+//   line-height: normal;
+//   font-size: 0.75rem;
+//   font-weight: 400;
+//   line-height: auto;
+//   color: var(--gray3);
+//   margin-left: 0.5rem;
+// }
+// .comments-content #respond form {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: stretch;
+//   flex-wrap: nowrap;
+//   gap: 1rem;
+// }
+// .comments-content #respond form textarea {
+//   resize: vertical;
+// }

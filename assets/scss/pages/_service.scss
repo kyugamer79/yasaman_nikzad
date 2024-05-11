@@ -1,0 +1,40 @@
+@use "../utils" as *;
+
+.main-service {
+  .bg-service-svg-wrapper {
+    z-index: -100;
+    top: -12vh;
+  }
+
+  .service-hero-wrapper {
+    .service-hero-img {
+      .service-img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media_query("lg", "max") {
+  .bg-service-svg-wrapper {
+    top: 16vh !important;
+  }
+}
+
+@include media_query("md", "max") {
+  .service-hero-wrapper {
+    .service-hero-txt {
+      order: 2;
+
+      & h1 {
+        font-size: 32px;
+        line-height: 48px;
+      }
+    }
+  }
+
+  .time-line-info-wrapper {
+    margin-block-start: 20px;
+    align-items: center;
+  }
+}

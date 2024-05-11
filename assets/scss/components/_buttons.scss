@@ -103,12 +103,12 @@ name of buttons that uses in project
 
 #{btn-select('primary')} {
   @include btn(
-    $color: $color_primary_900,
+    $color: $color_secondary_100,
     $bg-color: $color_primary,
-    $br-color: $color_primary,
-    $h-color: $color_primary_100,
-    $h-bg-color: $color_primary_700,
-    $h-br-color: $color_primary_700
+    $br-color: $color_secondary,
+    $h-color: $color_secondary_900,
+    $h-bg-color: $color_secondary_300,
+    $h-br-color: $color_secondary_300
   );
 }
 

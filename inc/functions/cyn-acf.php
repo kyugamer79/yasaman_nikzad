@@ -9,6 +9,7 @@ function cyn_register_acf()
 
 	cyn_register_acf_company_settings();
 	cyn_register_acf_service_settings();
+	cyn_register_acf_frontpage_settings();
 }
 
 function cyn_register_acf_company_settings()
@@ -39,7 +40,42 @@ function cyn_register_acf_company_settings()
 	cyn_register_acf_group('Company Settings', $fields, $location);
 }
 
-//	Services Function 
+
+
+// Home Page Function //
+function cyn_register_acf_frontpage_settings()
+{
+	$fields = [
+
+		cyn_acf_add_tab('intro'),
+		cyn_acf_add_group('intro', 'Intro', [
+			cyn_acf_add_image('intro-img', 'Intro Image'),
+			cyn_acf_add_text('intro-name', 'Intro Name'),
+			cyn_acf_add_text('intro-job', 'Intro Job'),
+		]),
+		cyn_acf_add_tab('test'),
+
+
+	];
+
+	$location = [
+		[
+			[
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'templates/frontpage.php'
+			],
+		],
+	];
+
+	cyn_register_acf_group('Home Page Settings', $fields, $location);
+}
+// End of Home Page Function //
+
+
+
+
+//	Services Function //
 function cyn_register_acf_service_settings()
 {
 	$fields = [
@@ -124,3 +160,4 @@ function cyn_register_acf_service_settings()
 
 	cyn_register_acf_group('Service Settings', $fields, $location);
 }
+//End of Services Function //

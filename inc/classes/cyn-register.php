@@ -28,6 +28,8 @@ if (!class_exists('cyn_register')) {
 			// $this->cyn_make_post_type('demo_post_type' , 'demo' , 'demos')
 			$this->cyn_make_post_type('landmark', 'landmark', 'landmarks', 'dashicons-format-gallery');
 			$this->cyn_make_post_type('service', 'service', 'services', 'dashicons-clipboard');
+			$this->cyn_make_post_type('consent', 'consent', 'consents', 'dashicons-admin-comments');
+			$this->cyn_make_post_type('resume', 'Resume', 'Resumes', 'dashicons-welcome-write-blog');
 		}
 
 		public function cyn_taxonomy_register()

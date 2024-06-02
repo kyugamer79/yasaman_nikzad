@@ -28,6 +28,15 @@ nav.menu {
   }
 }
 
+.header-menu {
+  .not-active {
+    &::before {
+      background: 0 !important;
+      content: none !important;
+    }
+  }
+}
+
 .menu-footer-container {
   .footer-menu {
     .current-menu-item {
@@ -43,6 +52,7 @@ nav.menu {
   backdrop-filter: blur(5px);
   pointer-events: none;
   transition: opacity $transition;
+  z-index: 999;
 
   &-inner {
     transform: translateX(-100%);
@@ -50,7 +60,6 @@ nav.menu {
   }
 
   &.active {
-    z-index: 999;
     opacity: 1;
     pointer-events: all;
 

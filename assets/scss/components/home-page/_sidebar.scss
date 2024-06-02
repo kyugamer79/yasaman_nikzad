@@ -1,0 +1,22 @@
+@use "../../utils/" as *;
+
+.home-page-hero-sidebar {
+  z-index: 1000;
+  width: 365px;
+  left: 0;
+  max-height: 115vh;
+  background: var(--primery, rgba(247, 247, 247, 0.08));
+  border: 1px solid var(--color-primery, rgba(255, 255, 255, 0.6));
+  backdrop-filter: blur(12px);
+
+  .sidebar-social-icons-wrapper {
+    .sidebar-social-icons {
+      width: 34px;
+    }
+  }
+}
+
+.menu-icon-wrapper {
+  z-index: 100;
+  margin: 36px 0 0 36px;
+}

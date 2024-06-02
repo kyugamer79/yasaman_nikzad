@@ -3,6 +3,9 @@
 main.contact-us {
   overflow: hidden;
 }
+.form-element {
+  box-shadow: $shadow_info;
+}
 .contact-us-image {
   &-wrapper {
     transform: scale(1.5) translateY(3rem);
@@ -29,6 +32,7 @@ main.contact-us {
   }
 }
 .send-contact-us {
+  background: linear-gradient(107.24deg, #f25c05 -11.52%, #f21305 129.61%);
   @include media_query("xs") {
     width: 100%;
   }

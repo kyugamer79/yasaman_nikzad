@@ -1,14 +1,14 @@
 <?php
-    $post_categories = get_the_category();
+$post_categories = get_the_category();
 
 
 
-    ?>
+?>
 
 
 
-<div class>
-    <div class="d-flex f-column gap-32 ">
+<div>
+    <div class="shadow-element | d-flex f-column gap-32 ">
         <div class="card-gap bg-primary radius-16 p-20 box-col-12 gap-32 title-blog">
             <!-- فیچر ایمیج بلاگ ها -->
             <div class="search-blogs-image col-span-3 d-flex ai-center jc-center">
@@ -28,7 +28,6 @@
                             <?php else : ?>
                             <?php echo $term->name . ', ' ?>
                             <?php endif; ?>
-
                         </a>
                         <?php endforeach; ?>
                     </div>

@@ -29,7 +29,7 @@ $colors_base: (
 }
 
 /*Border Radius*/
-$radius: 1rem;
+$radius: 0.75rem;
 $radius_sm: 0.25rem;
 
 /*Borders*/
@@ -48,10 +48,10 @@ for ex:
 make_font_list(font-size , font-weight , line-height);
 */
 $typo: (
-  "title": make_font_list(156px, 600px, 189px),
-  "title-sm": make_font_list(52px, 600px, 64px),
-  "title-1": make_font_list(76px, 600px, 88px),
-  "title-2": make_font_list(48px, 600px, 88px),
+  "title": make_font_list(156px, 600, 189px),
+  "title-sm": make_font_list(52px, 600, 64px),
+  "title-1": make_font_list(76px, 600, 88px),
+  "title-2": make_font_list(48px, 600, 88px),
   "h1": make_font_list(2rem, 700),
   "h2": make_font_list(1.5rem, 700),
   "h3": make_font_list(1.25rem, 700),
@@ -65,6 +65,7 @@ $typo: (
   "caption-sm-1": make_font_list(28px, 500, 32px),
   "body-1": make_font_list(16px, 500, 28px),
   "body-2": make_font_list(20px, 500, 40px),
+  "body-3": make_font_list(20px, 500, 32px),
 );
 
 /*Breakpoints*/

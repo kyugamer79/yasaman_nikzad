@@ -1,7 +1,7 @@
 @use "../utils" as *;
 
-$font_sizes: title, title-1, title-sm, h1, h2, h3, h4, h5, h6, body, body-sm,
-  caption;
+$font_sizes: title, title-1, title-2, title-sm, h1, h2, h3, h4, h5, h6, body,
+  body-sm, body-1, body-2, body-3, caption-sm, caption-sm-1, caption;
 
 @each $size in $font_sizes {
   #{$size},

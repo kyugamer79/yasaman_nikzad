@@ -335,10 +335,13 @@
     display: grid;
   }
 }
+
 //consent
 .consent {
   max-width: 496px;
+  height: 300px !important;
 }
+
 .consent-image-customer {
   max-width: 88px;
   max-height: 88px;

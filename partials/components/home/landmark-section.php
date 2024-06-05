@@ -25,19 +25,20 @@ $landmark_btn_title = $landmark_btn['title'];
 
         <?php foreach ($landmark_posts as $landmark_post) : ?>
 
-            <div class="landmark-image-wrapper | d-flex jc-center ai-center">
-                <h3 class="landmark-image-text | pos-absolute d-md-none text-natural-100 fs-h2">
-                    <?php echo $landmark_post->post_title ?>
-                </h3>
-                <?php echo get_the_post_thumbnail($landmark_post, 'full', ['class' => 'landmark-img']); ?>
-            </div>
+        <div class="landmark-image-wrapper | d-flex jc-center ai-center">
+            <h3 class="landmark-image-text | pos-absolute d-md-none text-natural-100 fs-h2">
+                <?php echo $landmark_post->post_title ?>
+            </h3>
+            <?php echo get_the_post_thumbnail($landmark_post, 'full', ['class' => 'landmark-img radius-16']); ?>
+        </div>
 
         <?php endforeach ?>
 
     </div>
 
     <div class="landmark-section-btn-wrapper">
-        <a class="landmark-section-btn | pi-20 pb-16 radius-12 text-natural-100 fs-caption-sm-1" href="<?php echo esc_url($landmark_btn_url); ?>"><?php echo esc_html($landmark_btn_title); ?></a>
+        <a class="landmark-section-btn | pi-20 pb-16 radius-12 text-natural-100 fs-caption-sm-1"
+            href="<?php echo esc_url($landmark_btn_url); ?>"><?php echo esc_html($landmark_btn_title); ?></a>
     </div>
 
 </div>

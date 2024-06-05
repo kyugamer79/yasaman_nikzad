@@ -10,31 +10,34 @@ $consent_cards = get_posts([
 
 ?>
 
-<div id="consent-section" class="content-title | text-center fs-title text-primary fs-lg-title-sm">
-    <?php _e('Consents', 'cyn-dm') ?></div>
-</div>
+<div class="consent-main-wrapper">
 
+    <div id="consent-section" class="content-title | text-center fs-title text-primary fs-lg-title-sm">
 
-<div class="swiper-main-wrapper">
-
-    <div class="swiper" id="consentSwiper">
-
-        <div class="swiper-wrapper | gap-40">
-
-
-            <?php foreach ($consent_cards as $consent_id) : ?>
-            <div class="swiper-slide"><?php cyn_get_card('consent-card', ['id' => $consent_id]) ?></div>
-            <?php endforeach ?>
-
-
-        </div>
-
-        <div class="swiper-pagination"></div>
-
-
-        <div class="swiper-scrollbar"></div>
+        <?php _e('Consents', 'cyn-dm') ?>
 
     </div>
 
+    <div class="swiper-main-wrapper">
+
+        <div class="swiper" id="consentSwiper">
+
+            <div class="swiper-wrapper">
+
+                <?php foreach ($consent_cards as $consent_id) : ?>
+
+                <div class="swiper-slide"><?php cyn_get_card('consent-card', ['id' => $consent_id]) ?></div>
+
+                <?php endforeach ?>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-scrollbar"></div>
+
+        </div>
+
+    </div>
 
 </div>

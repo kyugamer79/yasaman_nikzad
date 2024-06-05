@@ -6,7 +6,7 @@ use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 $updateChecker = PucFactory::buildUpdateChecker(
 	'https://github.com/cyandm/yasman_nikzad', //github theme
 	get_stylesheet_directory(),
-	'yasman_nikzad' //theme slug
+	'Nikzad' //theme slug
 );
 
 //Set the branch that contains the stable release.

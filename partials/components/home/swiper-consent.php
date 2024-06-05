@@ -10,7 +10,7 @@ $consent_cards = get_posts([
 
 ?>
 
-<div class="content-title | text-center fs-title text-primary fs-lg-title-sm">
+<div id="consent-section" class="content-title | text-center fs-title text-primary fs-lg-title-sm">
     <?php _e('Consents', 'cyn-dm') ?></div>
 </div>
 
@@ -23,7 +23,7 @@ $consent_cards = get_posts([
 
 
             <?php foreach ($consent_cards as $consent_id) : ?>
-                <div class="swiper-slide"><?php cyn_get_card('consent-card', ['id' => $consent_id]) ?></div>
+            <div class="swiper-slide"><?php cyn_get_card('consent-card', ['id' => $consent_id]) ?></div>
             <?php endforeach ?>
 
 

@@ -37,8 +37,9 @@ nav.menu {
   }
 }
 
-.menu-footer-container {
+.footer-wrapper {
   .footer-menu {
+    flex-wrap: nowrap;
     .current-menu-item {
       &::before {
         background: 0;

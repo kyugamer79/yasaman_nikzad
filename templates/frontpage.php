@@ -8,19 +8,27 @@
 
     <div class="home-page-hero | full-width">
 
+        <!-- Homepage Sidebar  -->
+
         <?php cyn_get_component("home/sidebar") ?>
 
         <div class="home-page-hero-swiper | d-flex f-column jc-start ai-end">
 
-            <?php cyn_get_component("home/swiper-info") ?>
+            <!-- Mobile Menu  -->
 
-            <div class="">
-                <?php cyn_get_component("mobile-menu") ?>
-            </div>
+            <?php cyn_get_component("mobile-menu") ?>
+
+            <!-- Logo  -->
 
             <div class="logo-wrapper | pos-absolute">
                 <?php the_custom_logo(); ?>
             </div>
+
+            <!-- Homepage Swiper Info  -->
+
+            <?php cyn_get_component("home/swiper-info") ?>
+
+            <!-- Homepage Swiper -->
 
             <?php cyn_get_component('home/swiper-homepage') ?>
 
@@ -30,25 +38,31 @@
 
     <section class="home-page-main-content | pi-40">
 
+        <!-- Landmark Section  -->
+
         <?php cyn_get_component("home/landmark-percent") ?>
 
         <div class="clr-fix-120" id="servicesSectionMenu"></div>
+
+        <!-- Services Section  -->
 
         <?php cyn_get_component("home/services-section") ?>
 
         <div class="clr-fix-120"></div>
 
-        <div class="video-teaser-wrapper">
-
-        </div>
+        <!-- Feature Section -->
 
         <?php cyn_get_component('services/feature') ?>
 
         <div class="clr-fix-120"></div>
 
+        <!-- Video Teaser -->
+
         <?php cyn_get_component('home/video-teaser') ?>
 
         <div class="clr-fix-120"></div>
+
+        <!-- Landmark Section -->
 
         <?php cyn_get_component('home/landmark-section') ?>
 
@@ -66,19 +80,15 @@
 
         <div class="clr-fix-120"></div>
 
-
         <!-- Residency -->
 
         <?php cyn_get_component('home/residency') ?>
 
         <div class="clr-fix-120"></div>
 
-
-        <!-- blogs -->
+        <!-- Blogs -->
 
         <?php cyn_get_component('home/swiper-blogs') ?>
-
-        <?php cyn_get_component('home/blog') ?>
 
         <div class="clr-fix-24"></div>
 
@@ -90,8 +100,7 @@
 
         <div class="clr-fix-120"></div>
 
-
-        <!-- get in touch -->
+        <!-- Get In Touch -->
 
         <?php cyn_get_component('home/get-in-touch') ?>
 

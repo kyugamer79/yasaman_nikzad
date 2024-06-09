@@ -1,32 +1,47 @@
 @use "../utils/" as *;
 
 .comments-content {
-  //@include d_flex(column, flex-start, stretch, nowrap, false, PxToRem(24));
   h6 {
-    // @include font_style(body);
     color: $color-primary-100;
   }
-
   #comment-list {
-    .comment {
-      padding-block: PxToRem(24);
-      //   @include d_flex(column, flex-start, stretch, nowrap, false, PxToRem(4));
-      &:not(:last-child) {
-        border-bottom: gray;
+    .edit-link {
+      display: none;
+    }
+    .fn {
+      margin: 20px;
+      color: $color_primary_100;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+      @include media_query("lg", "max") {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
       }
+    }
+
+    .comment {
       p,
       .reply {
         color: $color-primary-100;
       }
 
       .comment-meta {
-        a {
-          &:first-child {
-            //     @include font_style(caption2);
-            color: $color-primary-100;
-          }
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        @include media_query("lg", "max") {
+          margin: 0px;
+          display: block;
         }
       }
+      .comment-metadata {
+        a {
+          color: $color_secondary_400;
+        }
+      }
+
       .reply {
         display: none;
       }
@@ -34,14 +49,22 @@
 
     .comment {
       border-bottom: unset;
-      width: 90%;
+      width: 50%;
       align-self: flex-end;
+      padding: 32px;
+      border-radius: 16px;
+
+      @include media_query("lg") {
+        width: 92%;
+        align-items: center;
+        justify-content: center;
+      }
+
       .comment {
         width: 80%;
       }
     }
     .comment-author {
-      //@include d_flex(row, flex-start, stretch, nowrap, false, PxToRem(24));
       img {
         width: PxToRem(60);
         height: PxToRem(60);
@@ -52,23 +75,99 @@
       }
     }
   }
+  .comment-content {
+    display: flex;
+    flex-wrap: wrap;
+    @include media_query("lg", "max") {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
 }
+
+.comment-list > .comment {
+  background-color: $color_primary;
+  margin: 20px;
+}
+
+.comment:nth-child(even) {
+  transform: translateX(30%);
+  @include media_query("lg") {
+    transform: translateX(0%);
+  }
+}
+
 #respond {
-  //@include d_flex(column, flex-start, stretch, nowrap, false, PxToRem(16));
   #reply-title {
     small {
       #cancel-comment-reply-link {
-        //@include font_style(caption2);
         color: $color-primary-100;
         margin-left: PxToRem(8);
       }
     }
   }
   form {
-    //@include d_flex(column, flex-start, stretch, nowrap, false, PxToRem(16));
     textarea {
       resize: vertical;
     }
   }
 }
-//}
+.comment-form-cookies-consent {
+  display: none;
+}
+.comment-form-url {
+  display: none;
+}
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  .comment-input {
+    @include media_query("lg") {
+      width: 100%;
+      gap: 16px;
+    }
+    order: 3;
+    padding: 20px;
+    width: 70%;
+    border-radius: 16px;
+    background: $color_primary;
+  }
+  .comment-form-author {
+    @include media_query("lg") {
+      width: 100%;
+    }
+    order: 1;
+    background: $color_primary;
+    padding: 20px;
+    width: 70%;
+    border-radius: 16px;
+  }
+  .comment-form-email {
+    @include media_query("lg") {
+      width: 100%;
+    }
+    order: 2;
+    background: $color_primary;
+    padding: 20px;
+    width: 70%;
+    border-radius: 16px;
+  }
+  .button-add-comment {
+    order: 4;
+    background: linear-gradient(107.24deg, #f25c05 -11.52%, #f21305 129.61%);
+    border-radius: 16px;
+    background: $color_primary;
+    padding: 20px;
+    @include media_query("lg", "min") {
+      width: 108px;
+      height: 64px;
+      margin-inline: 65%;
+    }
+    @include media_query("lg") {
+      margin-inline: 0%;
+      width: 100%;
+    }
+  }
+}

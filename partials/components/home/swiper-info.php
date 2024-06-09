@@ -8,7 +8,7 @@
             <?php echo $swiper_info["swiper-txt-1"] ?>
         </div>
 
-        <div class="swiper-info-txt | text-natural-100 text-center fs-title-2">
+        <div class="swiper-info-txt swiper-info-txt-2 | text-natural-100 text-center fs-title-2">
             <?php echo $swiper_info["swiper-txt-2"] ?>
         </div>
 

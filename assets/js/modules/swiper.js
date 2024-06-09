@@ -94,7 +94,7 @@ const consentSwiper = new Swiper("#consentSwiper", {
 
 // Blog
 const blogSwiper = new Swiper("#blogSwiper", {
-  modules: [Navigation, Pagination],
+  modules: [Pagination],
   loop: true,
   slidesPerView: 2,
 
@@ -104,10 +104,6 @@ const blogSwiper = new Swiper("#blogSwiper", {
     clickable: true,
   },
 
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
 
   scrollbar: {
     el: ".swiper-scrollbar",

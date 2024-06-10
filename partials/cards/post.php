@@ -9,7 +9,7 @@ $post_categories = get_the_category();
             <!-- فیچر ایمیج بلاگ ها -->
             <div class="search-blogs-image col-span-3 d-flex ai-center jc-center">
                 <a href="<?php the_permalink() ?>" class=" blog-image d-block h-100">
-                    <?= wp_get_attachment_image(get_post_thumbnail_id(), 'full', false, ['class' => 'h-100 radius-8']); ?>
+                    <?= wp_get_attachment_image(get_post_thumbnail_id(), 'full', false, ['class' => 'radius-8', 'style' => 'aspect-ratio: 1']); ?>
                 </a>
             </div>
             <!-- قسمت متنی باکس -->
@@ -54,7 +54,7 @@ $post_categories = get_the_category();
                     <?php the_excerpt() ?>
                 </div>
 
-                <div class="clr-fix-20"></div>
+                <div class="clr-fix-20 d-lg-none"></div>
 
                 <div class="d-flex gap-36">
 

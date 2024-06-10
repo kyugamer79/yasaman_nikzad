@@ -9,11 +9,11 @@
             <img class="residency-image"
                 src="<?php echo get_stylesheet_directory_uri() . "/assets/img/footprint-trail.png" ?>" alt="footprint">
         </div>
-        <div class="residency-steps | d-flex f-column f-nowrap jc-center">
+        <div class="residency-steps | d-flex f-column f-nowrap gap-24 jc-center">
 
 
 
-            <div class="residency-step | d-flex f-row mi-20 f-nowrap">
+            <div class="residency-step | d-flex gap-12 f-row mi-20 f-nowrap">
                 <div class="text-primary-100">
                     <h1>Get Advice</h1>
                     <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,
@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div class="residency-step | d-flex f-row mi-20 f-nowrap">
+            <div class="residency-step | d-flex gap-12 f-row mi-20 f-nowrap">
                 <div class="text-primary-100">
                     <h1>Buying Property</h1>
                     <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,
@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="residency-step | d-flex f-row mi-20 f-nowrap">
+            <div class="residency-step | d-flex gap-12 f-row mi-20 f-nowrap">
                 <div class="text-primary-100">
                     <h1>Dubai Residency</h1>
                     <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,

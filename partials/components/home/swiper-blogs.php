@@ -1,4 +1,5 @@
 <?php
+
 $posts = get_posts([
     'post_type' => 'post',
     'posts_per_page' => 3,
@@ -27,7 +28,7 @@ $posts = get_posts([
 
             </div>
 
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination swiper-pagination-blog | mb-24 d-flex jc-center radius-50 gap-4"></div>
 
 
             <div class="swiper-scrollbar"></div>

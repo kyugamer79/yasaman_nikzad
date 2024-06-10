@@ -38,7 +38,7 @@
             </div>
 
             <div class="search-wrapper d-block d-md-none">
-                <a href="#"><img class=" pi-20 pb-16 radius-12"
+                <a href="/?s="><img class=" pi-20 pb-16 radius-12"
                         src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-1.png' ?>"
                         alt="search"></a>
             </div>

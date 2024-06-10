@@ -7926,6 +7926,14 @@ main.sample-page .shadow-sm {
   box-shadow: 0 0 0.25rem rgba(145, 145, 145, 0.15);
 }
 
+.comments-content {
+  width: 80%;
+}
+@media screen and (max-width: 992px) {
+  .comments-content {
+    width: 100%;
+  }
+}
 .comments-content h6 {
   color: var(--color-primary-100);
 }
@@ -7969,7 +7977,7 @@ main.sample-page .shadow-sm {
 }
 .comments-content #comment-list .comment {
   border-bottom: unset;
-  width: 50%;
+  width: 80%;
   align-self: flex-end;
   padding: 32px;
   border-radius: 16px;
@@ -8010,7 +8018,7 @@ main.sample-page .shadow-sm {
 }
 
 .comment:nth-child(even) {
-  transform: translateX(30%);
+  transform: translateX(15%);
 }
 @media screen and (max-width: 992px) {
   .comment:nth-child(even) {
@@ -8042,7 +8050,7 @@ main.sample-page .shadow-sm {
 .comment-form .comment-input {
   order: 3;
   padding: 20px;
-  width: 70%;
+  width: 80%;
   border-radius: 16px;
   background: var(--color-primary);
 }
@@ -8056,7 +8064,7 @@ main.sample-page .shadow-sm {
   order: 1;
   background: var(--color-primary);
   padding: 20px;
-  width: 70%;
+  width: 80%;
   border-radius: 16px;
 }
 @media screen and (max-width: 992px) {
@@ -8068,7 +8076,7 @@ main.sample-page .shadow-sm {
   order: 2;
   background: var(--color-primary);
   padding: 20px;
-  width: 70%;
+  width: 80%;
   border-radius: 16px;
 }
 @media screen and (max-width: 992px) {
@@ -8080,7 +8088,6 @@ main.sample-page .shadow-sm {
   order: 4;
   background: linear-gradient(107.24deg, #f25c05 -11.52%, #f21305 129.61%);
   border-radius: 16px;
-  background: var(--color-primary);
   padding: 20px;
 }
 @media screen and (min-width: 992px) {
@@ -8598,7 +8605,7 @@ nav.menu a {
 }
 .swiper .swiper-pagination .swiper-pagination-bullet {
   display: inline-block;
-  width: 16px !important;
+  width: 16px;
   height: 8px;
   z-index: 1000;
   background-color: #fff;
@@ -8608,7 +8615,7 @@ nav.menu a {
   cursor: pointer;
 }
 .swiper .swiper-pagination .swiper-pagination-bullet-active-main {
-  width: 64px !important;
+  width: 64px;
   height: 8px;
   background: var(--secondary-main, linear-gradient(107deg, var(--color-secondary-400) -11.52%, var(--color-secondary) 129.61%));
 }
@@ -8830,6 +8837,16 @@ nav.menu a {
     width: 100%;
   }
 }
+.swiper-main-wrapper .swiper .swiper-pagination {
+  margin-left: 0;
+}
+.swiper-main-wrapper .swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 76px;
+}
+.swiper-main-wrapper .swiper .swiper-pagination .swiper-pagination-bullet-active-main {
+  width: 160px;
+}
+
 .pin-icon {
   transform: translate(-28px, -48px);
 }
@@ -8928,6 +8945,10 @@ section.single-post-content blockquote p {
   }
 }
 
+.last {
+  color: #fff;
+}
+
 .main-service .bg-service-svg-wrapper {
   z-index: -100;
   top: -12vh;
@@ -8966,6 +8987,13 @@ section.single-post-content blockquote p {
   .card-gap {
     gap: 12px;
   }
+}
+
+.search-wrapper {
+  flex-wrap: nowrap;
+}
+.search-wrapper .search-input {
+  width: 100%;
 }
 
 .not-found-image-wrapper {
@@ -9028,34 +9056,33 @@ section.single-post-content blockquote p {
     text-align: center;
   }
 }
-@media screen and (min-width: 992px) {
-  .home-page-hero .home-page-hero-swiper .swiper .swiper-pagination .swiper-pagination-bullet {
-    width: 132px !important;
-  }
-  .home-page-hero .home-page-hero-swiper .swiper .swiper-pagination .swiper-pagination-bullet-active {
-    width: 276px !important;
-  }
-  .home-page-hero .home-page-hero-swiper .swiper-wrapper {
-    height: 100vh;
-  }
-  .home-page-hero .home-page-hero-swiper .swiper-button-prev,
-  .home-page-hero .home-page-hero-swiper .swiper-button-next {
-    display: none;
-  }
-  .home-page-hero .swiper-info {
-    z-index: 100;
-    left: 0;
-    right: 0;
-    top: 36vh;
-  }
-  .home-page-hero .swiper-info .swiper-info-btn .info-btn {
-    background: linear-gradient(107deg, var(--color-secondary) -11.52%, var(--color-secondary-400) 129.61%);
-  }
-  .home-page-hero .logo-wrapper {
-    z-index: 100;
-    margin: 36px 36px 0 0;
-  }
+.home-page-hero .home-page-hero-swiper .swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 132px !important;
 }
+.home-page-hero .home-page-hero-swiper .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  width: 276px !important;
+}
+.home-page-hero .home-page-hero-swiper .swiper-wrapper {
+  height: 100vh;
+}
+.home-page-hero .home-page-hero-swiper .swiper-button-prev,
+.home-page-hero .home-page-hero-swiper .swiper-button-next {
+  display: none;
+}
+.home-page-hero .swiper-info {
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 36vh;
+}
+.home-page-hero .swiper-info .swiper-info-btn .info-btn {
+  background: linear-gradient(107deg, var(--color-secondary) -11.52%, var(--color-secondary-400) 129.61%);
+}
+.home-page-hero .logo-wrapper {
+  z-index: 100;
+  margin: 36px 36px 0 0;
+}
+
 .home-page-main-content {
   max-width: 1440px;
   margin: 0 auto;
@@ -9079,27 +9106,23 @@ section.single-post-content blockquote p {
     z-index: 100;
     left: 0;
     right: 0;
-    top: 36vh;
+    top: 28vh;
   }
-  .home-page-hero .swiper-info .swiper-info-btn .info-btn {
-    background: linear-gradient(107deg, var(--color-secondary) -11.52%, var(--color-secondary-400) 129.61%);
-  }
-  .home-page-hero .logo-wrapper {
-    z-index: 100;
-    margin: 36px 36px 0 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .swiper-info .swiper-info-txt-wrapper .swiper-info-txt {
+  .home-page-hero .swiper-info .swiper-info-txt-wrapper .swiper-info-txt {
     font-size: 36px;
     line-height: 2;
     text-align: center;
   }
-  .swiper-info .swiper-info-txt-wrapper .swiper-info-txt-2 {
+  .home-page-hero .swiper-info .swiper-info-txt-wrapper .swiper-info-txt-2 {
     font-size: 24px;
   }
-  .swiper-info .swiper-info-btn .info-btn {
+  .home-page-hero .swiper-info .swiper-info-btn .info-btn {
+    background: linear-gradient(107deg, var(--color-secondary) -11.52%, var(--color-secondary-400) 129.61%);
     font-size: 16px;
+  }
+  .home-page-hero .logo-wrapper {
+    z-index: 100;
+    margin: 36px 36px 0 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -9222,14 +9245,16 @@ section.single-post-content blockquote p {
   display: grid;
 }
 
-.consent {
-  max-width: 496px;
-  height: 300px !important;
-}
-
 .consent-image-customer {
   max-width: 88px;
   max-height: 88px;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-display-style {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .residency-image-wrapper {
@@ -9311,7 +9336,7 @@ section.single-post-content blockquote p {
 }
 
 .post-sub {
-  height: 96px;
+  height: 92px;
   width: 100%;
   border: 1px solid #acacac;
   border-radius: 0 0 16px 16px;

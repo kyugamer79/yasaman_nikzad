@@ -18,7 +18,7 @@
 
     .swiper-pagination-bullet {
       display: inline-block;
-      width: 16px !important;
+      width: 16px;
       height: 8px;
       z-index: 1000;
       background-color: #fff;
@@ -30,7 +30,7 @@
     }
 
     .swiper-pagination-bullet-active-main {
-      width: 64px !important;
+      width: 64px;
       height: 8px;
       background: var(
         --secondary-main,

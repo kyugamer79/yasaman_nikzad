@@ -8,22 +8,34 @@ global $wp_query;
 <?php get_header() ?>
 
 
+<div class="search-wrapper">
+
+</div>
+
+<form action="/" class="search-wrapper bg-natural-800 d-flex jc-between ai-center pb-8 pi-12 radius-8">
+    <input class="search-input | text-natural-100 w-100" type="search" value="<?php the_search_query() ?>" id="search"
+        name="s" placeholder="Search">
+    <img class="search-logo" src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-1.png' ?>"
+        alt="logo">
+</form>
+
+<div class="clr-fix-28"></div>
+
 <?php if ($wp_query->have_posts()) : ?>
 
-    <p class="text-primary-100 fs-caption-sm paragraph">Search Results In Blogs For " <?php the_title() ?> " </p>
-    <div class="clr-fix-24"> </div>
-    <?php
+<p class="text-primary-100 fs-caption-sm ">Search Results In Blogs For " <?php the_search_query() ?> " </p>
+<div class="clr-fix-24"> </div>
+<?php
     while ($wp_query->have_posts()) :
         $wp_query->the_post();
         cyn_get_card('post');
     endwhile;
 else : ?>
 
-    <div class="text-secondary-400 d-flex jc-center fs-h2">
-        Post's Not Found
-    </div>
+<div class="text-secondary-400 d-flex jc-center fs-h2">
+    Post's Not Found
+</div>
 <?php endif; ?>
-<div class="clr-fix-80"> </div>
 
 
 
@@ -56,4 +68,6 @@ $all_post_args = new WP_Query($all_post_args);
     ]);
     ?>
 </div>
+<div class="clr-fix-80"> </div>
+
 <?php get_footer() ?>

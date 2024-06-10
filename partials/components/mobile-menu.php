@@ -9,12 +9,13 @@
                     alt="">
             </div>
 
-            <div class="search-wrapper bg-natural-800 d-flex jc-start ai-center pb-8 pi-12 radius-8">
+            <form action="/" class="search-wrapper bg-natural-800 d-flex jc-start ai-center pb-8 pi-12 radius-8">
                 <label for="search"></label>
-                <input class="text-natural-100" type="search" id="search" name="search" placeholder="Search">
+                <input class="text-natural-100" type="search" value="<?php the_search_query() ?>" id="search" name="s"
+                    placeholder="Search">
                 <img class="search-logo"
                     src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-1.png' ?>" alt="logo">
-            </div>
+            </form>
 
         </div>
 

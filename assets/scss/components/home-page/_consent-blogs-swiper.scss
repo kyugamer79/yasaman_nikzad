@@ -1,0 +1,15 @@
+.swiper-main-wrapper {
+  .swiper {
+    .swiper-pagination {
+      margin-left: 0;
+
+      .swiper-pagination-bullet {
+        width: 76px;
+      }
+
+      .swiper-pagination-bullet-active-main {
+        width: 160px;
+      }
+    }
+  }
+}

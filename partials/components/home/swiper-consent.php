@@ -32,7 +32,7 @@ $consent_cards = get_posts([
 
             </div>
 
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination | mb-24  d-flex jc-center radius-50 gap-4"></div>
 
             <div class="swiper-scrollbar"></div>
 

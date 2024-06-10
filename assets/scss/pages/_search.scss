@@ -7,3 +7,9 @@
     gap: 12px;
   }
 }
+.search-wrapper {
+  flex-wrap: nowrap;
+  .search-input {
+    width: 100%;
+  }
+}

@@ -1,8 +1,4 @@
 <?php defined('ABSPATH') || exit; ?>
-<?php
-global $wp_query;
-
-?>
 
 <!-- archive blog page -->
 
@@ -11,16 +7,14 @@ global $wp_query;
 
 <main class="archive-post">
 
-    <?php if (have_posts()) : ?>
-
-        <?php while (have_posts()) : ?>
-
-            <?php the_post() ?>
-            <?php cyn_get_card('post') ?>
-
-        <?php endwhile; ?>
-
-    <?php endif; ?>
+    <?php
+    if (have_posts()) :
+        while (have_posts()) : the_post();
+            cyn_get_card('post');
+        endwhile;
+        wp_reset_postdata();
+    endif;
+    ?>
 
 </main>
 

@@ -47,4 +47,6 @@
     </div>
 </main>
 
+<div class="clr-fix-80"></div>
+
 <?php get_footer() ?>

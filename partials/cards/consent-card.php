@@ -3,10 +3,10 @@ $id = $args['id'] ?? 0;
 
 ?>
 
-<div class="consent-wrapper consent shadow-element | bg-primary radius-16 p-32 mi-32">
+<div class="consent-wrapper consent shadow-element | bg-primary radius-16 pi-32 pb-40 d-flex f-column gap-28">
 
     <!-- title( image/date/name/position) -->
-    <div class="d-flex">
+    <div class="d-flex jc-start ai-center gap-12">
         <!-- image -->
         <div class="consent-image-customer">
             <?php echo get_the_post_thumbnail($id, 'full', ['class' => 'consent-image']) ?>
@@ -33,7 +33,6 @@ $id = $args['id'] ?? 0;
                 <?php echo get_field("consent_position", $id); ?>
             </div>
         </div>
-
     </div>
 
     <!-- description -->

@@ -5,12 +5,18 @@
 <footer>
 
     <div class="social-wrapper | d-flex jc-center gap-12 ai-center">
-        <a href="#"><img class="icon-test bg-primary pi-12 pb-12 radius-12"
-                src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-2.png'; ?>" alt="social"></a>
-        <a href="#"><img class="icon-test bg-primary pi-12 pb-12 radius-12"
-                src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-3.png'; ?>" alt="social"></a>
-        <a href="#"><img class="icon-test bg-primary pi-12 pb-12 radius-12"
-                src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-4.png'; ?>" alt="social"></a>
+        <?php
+
+            for ($i = 1; $i <= 3; $i++) :
+
+                $socialMedia_icons = get_field("social_media_$i", get_option('page_on_front'));
+            ?>
+
+        <a href="<?php echo $socialMedia_icons["social_link_$i"] ?>">
+            <?php echo wp_get_attachment_image($socialMedia_icons["social_icon_$i"], "full", false, ["class" => "sidebar-social-icons | bg-natural-900 radius-8 p-8"]); ?>
+        </a>
+
+        <?php endfor; ?>
     </div>
 
     <div class="footer-wrapper | d-flex jc-center mb-24">

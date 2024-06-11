@@ -48,8 +48,10 @@
 
                 ?>
 
-                <a class="cta-btn d-flex jc-center ai-start gap-8 pi-20 pb-16 radius-12 text-natural-100 fs-body-sm" href="<?php echo esc_url($btn_url); ?>"><?php echo esc_html($btn_title); ?>
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-2-white.png' ?>">
+                <a class="cta-btn d-flex jc-center gap-8 pi-20 pb-16 radius-12 text-natural-100 fs-body-sm" href="<?php echo esc_url($btn_url); ?>"><?php echo esc_html($btn_title); ?>
+                    <svg class="icon icon-service-information">
+                        <use href="#icon-service-call" />
+                    </svg>
                 </a>
 
             </div>

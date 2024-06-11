@@ -59,6 +59,11 @@
       )
     );
     z-index: 100;
+
+    .icon-service-swiper {
+      z-index: 100;
+      width: 24px;
+    }
   }
 
   .swiper-button-next {
@@ -77,17 +82,17 @@
       )
     );
     z-index: 100;
+
+    .icon-service-swiper {
+      z-index: 100;
+      width: 24px;
+    }
   }
 }
 
 .swiper-button-next,
 .swiper-button-prev:hover {
   cursor: pointer;
-}
-
-.icon-test-7,
-.icon-test-8 {
-  z-index: 100;
 }
 
 @include media_query("lg", "max") {

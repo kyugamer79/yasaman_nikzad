@@ -10,11 +10,11 @@
             </div>
 
             <form action="/" class="search-wrapper bg-natural-800 d-flex jc-start ai-center pb-8 pi-12 radius-8">
-                <label for="search"></label>
                 <input class="text-natural-100" type="search" value="<?php the_search_query() ?>" id="search" name="s"
                     placeholder="Search">
-                <img class="search-logo"
-                    src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-1.png' ?>" alt="logo">
+                <svg class="icon">
+                    <use href="#icon-search" />
+                </svg>
             </form>
 
         </div>
@@ -35,12 +35,18 @@
         </div>
 
         <div class="social-logo d-flex jc-center ai-center gap-12">
-            <img src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-2-white.png' ?>"
-                alt="icon-test-2">
-            <img src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-3-white.png' ?>"
-                alt="icon-test-3">
-            <img src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-4-white.png' ?>"
-                alt="icon-test-4">
+            <?php
+
+            for ($i = 1; $i <= 3; $i++) :
+
+                $socialMedia_icons = get_field("social_media_$i", get_option('page_on_front'));
+            ?>
+
+            <a href="<?php echo $socialMedia_icons["social_link_$i"] ?>">
+                <?php echo wp_get_attachment_image($socialMedia_icons["social_icon_$i"], "full", false, ["class" => "sidebar-social-icons | bg-natural-900 radius-8 p-8"]); ?>
+            </a>
+
+            <?php endfor; ?>
         </div>
 
     </div>

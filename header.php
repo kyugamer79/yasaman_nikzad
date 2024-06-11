@@ -12,7 +12,7 @@
 <body <?php body_class('container') ?>>
     <?php wp_body_open() ?>
 
-
+    <?php get_template_part('assets/icons/icon') ?>
     <?php if ($render_template) : ?>
     <header>
         <?php cyn_get_component('mobile-menu') ?>
@@ -38,15 +38,21 @@
             </div>
 
             <div class="search-wrapper d-block d-md-none">
-                <a href="/?s="><img class=" pi-20 pb-16 radius-12"
-                        src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-1.png' ?>"
-                        alt="search"></a>
+                <a href="/?s=">
+                    <svg class="icon search-icon | text-natural-100">
+                        <use href="#icon-search" />
+                    </svg>
+                </a>
+
             </div>
 
             <div class="menu-icon-wrapper d-none d-md-block" id="mobileMenuOpener">
-                <a href="#"><img class="pi-20 pb-16 radius-12"
-                        src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-5.png' ?>"
-                        alt="search"></a>
+                <a href="#">
+                    <svg class="icon menu-icon | text-natural-100">
+                        <use href="#icon-menu" />
+                    </svg>
+
+                </a>
             </div>
         </div>
 

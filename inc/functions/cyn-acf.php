@@ -52,8 +52,6 @@ function cyn_register_acf_frontpage_settings()
 {
 	$fields = [
 
-
-
 		cyn_acf_add_tab('intro'),
 		cyn_acf_add_group('intro', __("Intro", "cyn-dm"), [
 			cyn_acf_add_image('intro-img', 'Intro Image'),
@@ -68,18 +66,61 @@ function cyn_register_acf_frontpage_settings()
 		]),
 		cyn_acf_add_tab('Landmark Image & Text'),
 		cyn_acf_add_image('landmark-percent-img', 'Landmark Percent Image'),
-		// cyn_acf_add_image('landmark-percent-mobile-img', 'Landmark Percent Mobile Image'),
 		cyn_acf_add_text('landmark-percent-txt', 'Landmark Percent Text'),
 		cyn_acf_add_tab('Blog Post'),
 		cyn_acf_add_link('blog-post-btn', 'Blog Post Button'),
 		cyn_acf_add_tab('Video Teaser'),
 		cyn_acf_add_file('teaser-cover', 'Teaser Cover'),
 		cyn_acf_add_file('teaser-video', 'Teaser Video'),
-
 	];
 
-	//Homepage Page Slideshow
 
+	//residency loop
+
+	$residency_steps = [];
+
+	for ($i = 1; $i <= 3; $i++) {
+
+		$residency_step =
+			cyn_acf_add_group("residency_$i", "Residency $i", [
+
+				cyn_acf_add_text("residency_title_$i", __("Residency Title $i", "cyn-dm")),
+				cyn_acf_add_text("residency_txt_$i", __("Residency Text $i", "cyn-dm")),
+			]);
+
+		array_push($residency_steps, $residency_step);
+	};
+
+	array_push($fields, cyn_acf_add_tab('Residency'),);
+	$fields = array_merge($fields, $residency_steps);
+
+
+	//End of residency loop
+
+
+	//Social Media loop
+
+	$socialMedia_icons = [];
+
+	for ($i = 1; $i <= 3; $i++) {
+
+		$socialMedia_icon =
+			cyn_acf_add_group("social_media_$i", "Social Media $i", [
+
+				cyn_acf_add_image("social_icon_$i", __("Social Icon $i", "cyn-dm")),
+				cyn_acf_add_text("social_link_$i", __("Social Link $i", "cyn-dm")),
+			]);
+
+		array_push($socialMedia_icons, $socialMedia_icon);
+	};
+
+	array_push($fields, cyn_acf_add_tab('Social Media'),);
+	$fields = array_merge($fields, $socialMedia_icons);
+
+	//End of Social Media loop
+
+
+	//Homepage Page Slideshow
 	$slideshow_imgs = [];
 
 	for ($i = 1; $i <= 3; $i++) {

@@ -28,14 +28,18 @@
             <div class="text-secondary-400 d-flex gap-24 body-1">
 
                 <div class="d-flex gap-8 jc-center ai-center">
-                    <img src="<?php echo get_stylesheet_directory_uri() . "/assets/img/Search.png" ?>" alt="read more">
-                    <time datetime="2024-04-29T12:18:26+03:30"
-                        itemprop="datePublished"><?php echo get_the_date('Y/m/d') ?></time>
+
+                    <svg class="icon archive-blog-date-icon">
+                        <use href="#icon-Calendar-1" />
+                    </svg>
+
+                    <time datetime="2024-04-29T12:18:26+03:30" itemprop="datePublished"><?php echo get_the_date('Y/m/d') ?></time>
                 </div>
 
                 <div class="d-flex gap-8 jc-center ai-center">
-                    <img src="<?php echo get_stylesheet_directory_uri() . "/assets/img/Search.png" ?>" alt="read more">
-                    <?php echo get_comments_number() . '&nbsp' . '&nbsp' .  'Comments' ?>
+                    <svg class="icon archive-blog-comment-icon">
+                        <use href="#icon-comments" />
+                    </svg> <?php echo get_comments_number() . '&nbsp' . '&nbsp' .  'Comments' ?>
                 </div>
 
             </div>
@@ -51,7 +55,6 @@
             <section class="single-post-content | fs-body-2">
                 <?php the_content() ?>
             </section>
-
         </div>
     </section>
 

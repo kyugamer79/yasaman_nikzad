@@ -1,74 +1,12 @@
 @font-face {
-  font-family: "Peyda";
-  src: url("../fonts/peyda/woff2/PeydaWebFaNum-Thin.woff2");
-  src: url("../fonts/peyda/TTF/PeydaFaNum-Thin.ttf") format("truetype"), url("../fonts/peyda/woff/PeydaWebFaNum-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Peyda";
-  src: url("../fonts/peyda/woff2/PeydaWebFaNum-ExtraLight.woff2");
-  src: url("../fonts/peyda/TTF/PeydaFaNum-ExtraLight.ttf") format("truetype"), url("../fonts/peyda/woff/PeydaWebFaNum-ExtraLight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Peyda";
-  src: url("../fonts/peyda/woff2/PeydaWebFaNum-Light.woff2");
-  src: url("../fonts/peyda/TTF/PeydaFaNum-Light.ttf") format("truetype"), url("../fonts/peyda/woff/PeydaWebFaNum-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Peyda";
-  src: url("../fonts/peyda/woff2/PeydaWebFaNum-Regular.woff2");
-  src: url("../fonts/peyda/TTF/PeydaFaNum-Regular.ttf") format("truetype"), url("../fonts/peyda/woff/PeydaWebFaNum-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Peyda";
-  src: url("../fonts/peyda/woff2/PeydaWebFaNum-Medium.woff2");
-  src: url("../fonts/peyda/TTF/PeydaFaNum-Medium.ttf") format("truetype"), url("../fonts/peyda/woff/PeydaWebFaNum-Medium.woff") format("woff");
+  font-family: OpenSans;
   font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.eot") format("eot"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Peyda";
-  src: url("../fonts/peyda/woff2/PeydaWebFaNum-SemiBold.woff2");
-  src: url("../fonts/peyda/TTF/PeydaFaNum-SemiBold.ttf") format("truetype"), url("../fonts/peyda/woff/PeydaWebFaNum-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Peyda";
-  src: url("../fonts/peyda/woff2/PeydaWebFaNum-Bold.woff2");
-  src: url("../fonts/peyda/TTF/PeydaFaNum-Bold.ttf") format("truetype"), url("../fonts/peyda/woff/PeydaWebFaNum-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Peyda";
-  src: url("../fonts/peyda/woff2/PeydaWebFaNum-ExtraBold.woff2");
-  src: url("../fonts/peyda/TTF/PeydaFaNum-ExtraBold.ttf") format("truetype"), url("../fonts/peyda/woff/PeydaWebFaNum-ExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Peyda";
-  src: url("../fonts/peyda/woff2/PeydaWebFaNum-Black.woff2");
-  src: url("../fonts/peyda/TTF/PeydaFaNum-Black.ttf") format("truetype"), url("../fonts/peyda/woff/PeydaWebFaNum-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
+  font-family: OpenSans;
+  font-weight: bold;
+  src: url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.eot") format("eot"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
 }
 /*Colors*/
 :root {
@@ -348,7 +286,7 @@ meter {
 }
 
 :root {
-  --body-font-family: "Peyda", system-ui, -apple-system, "Segoe UI", Roboto;
+  --body-font-family: "OpenSans", system-ui, -apple-system, "Segoe UI", Roboto;
   --border-radius: 0.75rem;
   --border-radius-sm: 0.25rem;
   --box-shadow: 0 0 0.5rem rgba(145, 145, 145, 0.25);
@@ -7889,6 +7827,17 @@ caption,
   flex-wrap: nowrap;
 }
 
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.search-icon,
+.menu-icon {
+  width: 44px;
+  height: 44px;
+}
+
 .footer-rec {
   margin-inline: auto;
   width: 50vw;
@@ -8551,7 +8500,9 @@ nav.menu a {
 }
 .menu-mobile-inner .search-logo,
 .menu-mobile-inner .mobile-menu-logo {
+  z-index: 100;
   width: 24px;
+  height: 24px;
 }
 
 .nav-links {
@@ -8629,6 +8580,10 @@ nav.menu a {
   background: var(--secondary-main, linear-gradient(107deg, var(--color-secondary-400) -11.52%, var(--color-secondary) 129.61%));
   z-index: 100;
 }
+.swiper .swiper-button-prev .icon-service-swiper {
+  z-index: 100;
+  width: 24px;
+}
 .swiper .swiper-button-next {
   width: 44px !important;
   height: 44px !important;
@@ -8639,15 +8594,14 @@ nav.menu a {
   background: var(--secondary-main, linear-gradient(107deg, var(--color-secondary-400) -11.52%, var(--color-secondary) 129.61%));
   z-index: 100;
 }
+.swiper .swiper-button-next .icon-service-swiper {
+  z-index: 100;
+  width: 24px;
+}
 
 .swiper-button-next,
 .swiper-button-prev:hover {
   cursor: pointer;
-}
-
-.icon-test-7,
-.icon-test-8 {
-  z-index: 100;
 }
 
 @media screen and (max-width: 992px) {
@@ -8777,6 +8731,11 @@ nav.menu a {
     width: 100%;
   }
 }
+.icon-service-information {
+  width: 24px;
+  height: 24px;
+}
+
 .home-page-hero-sidebar {
   z-index: 1000;
   width: 365px;
@@ -8977,6 +8936,7 @@ section.single-post-content blockquote p {
 }
 .time-line-arrow {
   object-fit: contain;
+  width: 88px;
 }
 
 .results-bg {
@@ -9032,7 +8992,7 @@ section.single-post-content blockquote p {
 @media screen and (min-width: 992px) {
   .content-title {
     z-index: -100;
-    transform: translateY(4rem);
+    transform: translateY(3rem);
   }
 }
 
@@ -9052,7 +9012,7 @@ section.single-post-content blockquote p {
 @media screen and (min-width: 992px) {
   .content-title {
     z-index: -100;
-    transform: translateY(4.5rem);
+    transform: translateY(3.8rem);
     text-align: center;
   }
 }
@@ -9219,11 +9179,15 @@ section.single-post-content blockquote p {
 }
 
 .landmark-wrapper .content-title {
-  transform: translateY(6.5rem);
+  transform: translateY(4.8rem);
 }
 
 .video-teaser-main-wrapper .video-teaser-title-wrapper {
-  transform: translateY(4rem);
+  transform: translateY(3rem);
+}
+
+.blog-section-main-wrapper .content-title {
+  transform: translateY(2.4rem);
 }
 
 @media screen and (max-width: 992px) {
@@ -9320,6 +9284,10 @@ section.single-post-content blockquote p {
   }
 }
 
+.residency-button {
+  padding: 16px 20px;
+}
+
 .home-blog-img {
   aspect-ratio: 1/1;
   max-width: 496px;
@@ -9349,6 +9317,17 @@ section.single-post-content blockquote p {
 
 .form-element {
   box-shadow: 0 0.5rem 0.6rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.get-in-touch-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.archive-blog-date-icon,
+.archive-blog-comment-icon {
+  width: 24px;
+  height: 24px;
 }
 
 @font-face {

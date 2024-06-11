@@ -17,8 +17,10 @@
     <div class="clr-fix-24"></div>
     <div class="d-flex f-row-reverse">
         <button class="button btn-secondary" type="submit">
-            <span>Send Message</span><img src="<?php echo get_stylesheet_directory_uri() . "/assets/img/Search.png" ?>"
-                alt="submit-picture-contact">
+            <span>Send Message</span>
+            <svg class="icon get-in-touch-icon">
+                <use href="#icon-contact-btn-arrow" />
+            </svg>
         </button>
     </div>
 </div>

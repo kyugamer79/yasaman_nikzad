@@ -18,25 +18,23 @@ $post_categories = get_the_category();
                     <!-- دسته بندی یا کتگوری بلاگ ها -->
                     <div class=" d-flex gap-4">
                         <?php foreach ($post_categories as $term) : ?>
-                        <a href="<?php echo get_term_link($term) ?>" class="text-secondary-400">
-                            <?php if ($term === end($post_categories)) : ?>
-                            <?php echo $term->name ?>
-                            <?php else : ?>
-                            <?php echo $term->name . ', ' ?>
-                            <?php endif; ?>
-                        </a>
+                            <a href="<?php echo get_term_link($term) ?>" class="text-secondary-400">
+                                <?php if ($term === end($post_categories)) : ?>
+                                    <?php echo $term->name ?>
+                                <?php else : ?>
+                                    <?php echo $term->name . ', ' ?>
+                                <?php endif; ?>
+                            </a>
                         <?php endforeach; ?>
                     </div>
 
                     <!-- تاریخ -->
                     <div class="d-none d-lg-block fs-body-1">
-                        <img class="d-lg-none"
-                            src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-1.png' ?>"
-                            alt="search">
+                        <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date('Y/m/d'); ?>
+                        </time>
 
-                        <time datetime="<?php echo get_the_date('c'); ?>"
-                            itemprop="datePublished"><?php echo get_the_date('Y/m/d'); ?></time>
                     </div>
+
                 </div>
 
                 <div class="clr-fix-8"></div>
@@ -59,15 +57,17 @@ $post_categories = get_the_category();
                 <div class="d-flex gap-36">
 
                     <div class="d-lg-none d-flex jc-center ai-center fs-body-1 gap-8">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-14.png' ?>"
-                            alt="icon-test">
-                        <time datetime="<?php echo get_the_date('c'); ?>"
-                            itemprop="datePublished"><?php echo get_the_date('Y/m/d'); ?></time>
+                        <svg class="icon archive-blog-date-icon">
+                            <use href="#icon-Calendar-1" />
+                        </svg>
+
+                        <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date('Y/m/d'); ?></time>
                     </div>
 
                     <div class="d-lg-none d-flex jc-center ai-center fs-body-1 gap-8">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/icon-test-15.png' ?>"
-                            alt="icon-test">
+                        <svg class="icon archive-blog-comment-icon">
+                            <use href="#icon-comments" />
+                        </svg>
                         <?php echo get_comments_number() . '&nbsp' . '&nbsp' .  'comments' ?>
                     </div>
                 </div>

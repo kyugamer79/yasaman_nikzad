@@ -1,1 +1,7 @@
 @use "../utils/" as *;
+
+.archive-blog-date-icon,
+.archive-blog-comment-icon {
+  width: 24px;
+  height: 24px;
+}

@@ -1,2 +1,15 @@
 @use "../utils/" as *;
+// .search-wrapper {
+//   max-width: 24px;
+//   max-height: 24px;
+// }
+.icon {
+  width: 24px;
+  height: 24px;
+}
 
+.search-icon,
+.menu-icon {
+  width: 44px;
+  height: 44px;
+}

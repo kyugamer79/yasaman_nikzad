@@ -7,7 +7,7 @@
 .content-title {
   @include media_query("lg", "min") {
     z-index: -100;
-    transform: translateY(4rem);
+    transform: translateY(3rem);
   }
 }
 
@@ -24,7 +24,7 @@
 @include media_query("lg", "min") {
   .content-title {
     z-index: -100;
-    transform: translateY(4.5rem);
+    transform: translateY(3.8rem);
     text-align: center;
   }
 }
@@ -264,13 +264,19 @@
 
 .landmark-wrapper {
   .content-title {
-    transform: translateY(6.5rem);
+    transform: translateY(4.8rem);
   }
 }
 
 .video-teaser-main-wrapper {
   .video-teaser-title-wrapper {
-    transform: translateY(4rem);
+    transform: translateY(3rem);
+  }
+}
+
+.blog-section-main-wrapper {
+  .content-title {
+    transform: translateY(2.4rem);
   }
 }
 
@@ -362,6 +368,10 @@
   }
 }
 
+.residency-button {
+  padding: 16px 20px;
+}
+
 // Blogs
 .home-blog-img {
   // max-width: 25%;
@@ -393,4 +403,9 @@
 // Get In Touch section
 .form-element {
   box-shadow: $shadow_info;
+}
+
+.get-in-touch-icon {
+  width: 24px;
+  height: 24px;
 }
